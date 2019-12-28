@@ -1,0 +1,16 @@
+server:
+  port: 9091
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:9090/eureka/
+
+spring:
+  application:
+    name: zuul
+
+
+

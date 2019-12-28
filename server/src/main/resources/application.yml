@@ -1,0 +1,15 @@
+server:
+  port: 9090
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    # 通过下面2个false可以表明自己是一个eureka server
+    register-with-eureka: true
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+spring:
+  application:
+    name: server
