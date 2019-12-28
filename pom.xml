@@ -28,6 +28,8 @@
 
     <modules>
         <module>server</module>
+        <module>zuul</module>
+        <module>socket</module>
     </modules>
 
 

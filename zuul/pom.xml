@@ -12,6 +12,7 @@
     <groupId>com.example</groupId>
     <artifactId>zuul</artifactId>
     <version>1.0</version>
+
     <name>zuul</name>
     <description>网关</description>
 
