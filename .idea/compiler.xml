@@ -9,11 +9,13 @@
         <module name="zuul" />
         <module name="server" />
         <module name="socket" />
+        <module name="generating" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="generating" options="-parameters" />
       <module name="server" options="-parameters" />
       <module name="socket" options="-parameters" />
       <module name="zuul" options="-parameters" />

@@ -30,6 +30,7 @@
         <module>server</module>
         <module>zuul</module>
         <module>socket</module>
+        <module>generating</module>
     </modules>
 
 

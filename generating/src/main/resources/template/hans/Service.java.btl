@@ -1,0 +1,22 @@
+package ${config.prePackageName}.${config.moduleName}.service;
+
+<% for(import in config.serviceImports!){ %>
+import ${import};
+<% } %>
+import ${config.prePackageName}.${config.moduleName}.dao.${config.enBigName}Dao;
+import ${config.prePackageName}.${config.moduleName}.entity.${config.enBigName};
+import ${config.prePackageName}.${config.moduleName}.dto.vo.${config.enBigName}Vo;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+/**
+ * ${config.chName}控制器
+ *
+ * @author ${config.author}
+ * @Date ${tool.currentTime()}
+ */
+@Service
+public class ${config.enBigName}Service extends CrudService<${config.enBigName}Dao, ${config.enBigName}, ${config.enBigName}Vo> {
+
+
+}

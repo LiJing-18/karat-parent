@@ -1,5 +1,9 @@
 server:
   port: 9090
+spring:
+  application:
+    name: server
+
 
 eureka:
   instance:
@@ -10,6 +14,4 @@ eureka:
     fetch-registry: false
     service-url:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
-spring:
-  application:
-    name: server
+

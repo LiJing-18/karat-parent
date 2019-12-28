@@ -1,0 +1,38 @@
+package ${config.prePackageName}.${config.moduleName}.entity;
+
+<% for(import in config.entityImports!){ %>
+import ${import};
+<% } %>
+<% for(import in tableInfo.ImportPackages!){ %>
+import ${import};
+<% } %>
+import lombok.Getter;
+import lombok.Setter;
+import lombok.NoArgsConstructor;
+/**
+ * ${config.chName}Entity
+ * @author ${config.author}
+ * @Date ${tool.currentTime()}
+ */
+@Getter
+@Setter
+@NoArgsConstructor
+public class ${config.enBigName} extends DataEntity<${config.enBigName}> {
+
+    private static final long serialVersionUID = 1L;
+
+<% for(field in tableInfo.fields!){ %>
+    <% if (fieldUtil.getIsNotBaseField(field.name)) { %>
+    /** ${field.comment} */
+    <% if (tool.equals("Date", field.columnType.type + "")) { %>
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    <% } %>
+    private <% if (tool.equals("Date", field.columnType.type + "")) { %>LocalDateTime<% } %><% if (field.columnType.type == "Integer") { %>int<% } %><% if (field.columnType.type == "Float") { %>float<% } %><% if (field.columnType.type != "Integer" && field.columnType.type != "Float") { %>${field.columnType.type}<% } %> ${tool.firstLetterToLower(field.name)}<% if (field.columnType.type == "String") { %> = ""<% } %>;
+    <% } %>
+<% } %>
+
+    public ${config.enBigName}(String id) {
+        super(id);
+    }
+
+}

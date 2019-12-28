@@ -1,0 +1,126 @@
+<style scoped>
+</style>
+
+<template>
+  <CrudView :tableOptions="tableOptions" :treeOptions="treeOptions"></CrudView>
+</template>
+
+<script>
+  import {CrudView} from 'components/';
+  export default {
+    data () {
+      return {
+        tableOptions
+      };
+    },
+    computed: {},
+    methods: {},
+    mounted () {
+    },
+    components: {CrudView}
+  };
+  /**
+   * 弹出式表单参数
+   */
+  const tableEditOptions = {
+    width: 450,
+    labelWidth: 80,
+    dynamic: [
+      [
+        {name: 'id', hidden: true},
+    <% for(field in tableInfo.fields!){ %>
+      <% if (field.isVo && field.formType == "text") { %>
+        {name: '${tool.firstLetterToLower(field.name)}', type: 'text', span: 20, label: '${field.comment}', rules: {required: true}}${fieldLP.last?"":","}
+      <% } %>
+      <% if (field.isVo && field.formType == "switch") { %>
+        {name: '${tool.firstLetterToLower(field.name)}',
+          span: 20,
+          type: '${field.formType}',
+          label: '${field.comment}',
+          openText: '启用',
+          closeText: '禁用',
+          value: 1,
+          trueValue: 1,
+          falseValue: 2,
+          rules: {required: true, type: 'number'}
+        }${fieldLP.last?"":","}
+      <% } %>
+      <% if (field.isVo && field.formType == "select") { %>
+        {name: '${tool.firstLetterToLower(field.name)}',
+          span: 20,
+          type: '${field.formType}',
+          label: '${field.comment}',
+          data: [{label: '值1', value: 1}, {label: '值2', value: 2}],
+          rules: {required: true, type: 'number'}
+        }${fieldLP.last?"":","}
+      <% } %>
+    <% } %>
+      ]
+    ]
+  };
+  /**
+   * 表格参数
+   */
+  const tableOptions = {
+    selection: [],
+    pageSize: 10,
+    title: '${config.chName}',
+    permsPrefix: '${config.enName}',
+    editOptions: tableEditOptions,
+    dataUrl: '/${config.url}/page',
+    createUrl: '/${config.url}/add',
+    deleteUrl: '/${config.url}/delete',
+    updateUrl: '/${config.url}/update',
+    param: {},
+    columns: [
+      {type: 'selection', width: 60, align: 'center'},
+  <% for(field in tableInfo.fields!){ %>
+    <% if (field.isVo && field.formType == "text") { %>
+      {key: '${tool.firstLetterToLower(field.name)}', title: '${field.comment}'${fieldLP.last?"":", width: 120"}}${fieldLP.last?"":","}
+    <% } %>
+    <% if (field.isVo && (field.formType == "select" || field.formType == "switch")) { %>
+      {key: '${tool.firstLetterToLower(field.name)}', title: '${field.comment}', enum: [{value: '值1', id: 1}, {value: '值2', id: 2}]${fieldLP.last?"":", width: 120"}}${fieldLP.last?"":","}
+    <% } %>
+  <% } %>
+    ],
+    /**
+     * 搜索框参数
+     */
+    searchDynamic: [
+      [
+  <% for(field in tableInfo.fields!){ %>
+      <% if (field.isSearch && field.formType == "text") { %>
+        {name: '${tool.firstLetterToLower(field.name)}',
+          label: '${field.comment}',
+          span: 4,
+          type: 'text'
+        }${fieldLP.last?"":","}
+      <% } %>
+      <% if (field.isSearch && field.formType == "select") { %>
+        {name: '${tool.firstLetterToLower(field.name)}',
+          label: '${field.comment}',
+          span: 4,
+          type: 'select',
+          data: [{label: '值1', value: 1}, {label: '值2', value: 2}]
+        }${fieldLP.last?"":","}
+      <% } %>
+      <% if (field.isSearch && field.formType == "switch") { %>
+        {name: '${tool.firstLetterToLower(field.name)}',
+          label: '${field.comment}',
+          span: 4,
+          type: 'select',
+          data: [{label: '值1', value: 1}, {label: '值2', value: 2}]
+        }${fieldLP.last?"":","}
+      <% } %>
+      <% if (field.isSearch && field.formType == "date") { %>
+        {name: '${tool.firstLetterToLower(field.name)}',
+          label: '${field.comment}',
+          span: 4,
+          type: 'date'
+        }${fieldLP.last?"":","}
+    <% } %>
+  <% } %>
+      ]
+    ]
+  };
+</script>

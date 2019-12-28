@@ -1,5 +1,8 @@
 server:
   port: 9091
+spring:
+  application:
+    name: zuul
 
 eureka:
   instance:
@@ -8,9 +11,12 @@ eureka:
     service-url:
       defaultZone: http://${eureka.instance.hostname}:9090/eureka/
 
-spring:
-  application:
-    name: zuul
+
+zuul:
+  routes:
+    socket:
+      path: /socket/**
+      serviceId: socket
 
 
 
