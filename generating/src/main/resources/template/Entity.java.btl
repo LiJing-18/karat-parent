@@ -17,10 +17,11 @@ import lombok.NoArgsConstructor;
 @Getter
 @Setter
 @NoArgsConstructor
-public class ${config.enBigName} extends DataEntity<${config.enBigName}> {
+public class ${config.enBigName}{
 
     private static final long serialVersionUID = 1L;
-
+     /** 主键id */
+    private String id;
 <% for(field in tableInfo.fields!){ %>
     <% if (fieldUtil.getIsNotBaseField(field.name)) { %>
     /** ${field.comment} */
@@ -31,8 +32,5 @@ public class ${config.enBigName} extends DataEntity<${config.enBigName}> {
     <% } %>
 <% } %>
 
-    public ${config.enBigName}(String id) {
-        super(id);
-    }
 
 }

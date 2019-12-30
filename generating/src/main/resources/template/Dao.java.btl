@@ -1,0 +1,12 @@
+package ${config.prePackageName}.${config.moduleName}.dao;
+
+import org.apache.ibatis.annotations.Mapper;
+/**
+ * ${config.chName}Dao
+ * @author ${config.author}
+ * @Date ${tool.currentTime()}
+ */
+@Mapper
+public interface ${config.enBigName}Dao{
+
+}

@@ -18,12 +18,12 @@ import io.swagger.annotations.ApiModelProperty;
 @Getter
 @Setter
 @ApiModel(value = "${config.enBigName}Vo")
-public class ${config.enBigName}Vo extends BaseVo {
+public class ${config.enBigName}Vo{
 
     private static final long serialVersionUID = 1L;
 
 <% for(field in tableInfo.fields!){ %>
-    <% if (fieldUtil.getIsNotBaseField(field.name) && field.isVo) { %>
+    <% if (fieldUtil.getIsNotBaseField(field.name)) { %>
     /** ${field.comment} */
     @ApiModelProperty(value = "${field.comment}")
     <% if (tool.equals("Date", field.columnType.type + "")) { %>
