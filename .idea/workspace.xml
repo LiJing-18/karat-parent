@@ -2,36 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="150e12db-e1cf-4fc4-9d21-11040cd629d8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/socket/src/main/java/com/example/socket/business/BaseController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/socket/src/main/java/com/example/socket/business/dao/BannerInfoDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/socket/src/main/java/com/example/socket/business/dto/arg/BannerInfoInsert.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/socket/src/main/java/com/example/socket/business/dto/arg/BannerInfoSearch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/socket/src/main/java/com/example/socket/business/dto/arg/BannerInfoUpdate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/socket/src/main/java/com/example/socket/business/dto/vo/BannerInfoVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/socket/src/main/java/com/example/socket/business/entity/BannerInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/socket/src/main/java/com/example/socket/business/service/BannerInfoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/socket/src/main/java/com/example/socket/business/service/impl/BannerInfoServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/socket/src/main/java/com/example/socket/business/web/BannerInfoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/socket/src/main/java/com/example/socket/config/Swagger2Config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/socket/src/main/resources/config/application-dev.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/socket/src/main/resources/mapper/business/BannerInfoDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zuul/src/main/java/com/example/zuul/config/Swagger2Config.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generating/src/main/resources/template/Controller.java.btl" beforeDir="false" afterPath="$PROJECT_DIR$/generating/src/main/resources/template/Controller.java.btl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generating/src/main/resources/template/Dao.xml.btl" beforeDir="false" afterPath="$PROJECT_DIR$/generating/src/main/resources/template/Dao.xml.btl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generating/src/main/resources/template/Search.java.btl" beforeDir="false" afterPath="$PROJECT_DIR$/generating/src/main/resources/template/Search.java.btl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generating/src/main/resources/template/ServiceImpl.java.btl" beforeDir="false" afterPath="$PROJECT_DIR$/generating/src/main/resources/template/ServiceImpl.java.btl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generating/src/main/resources/template/Sp.sql.btl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/generating/src/main/resources/template/SpDao.xml.btl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/generating/src/main/resources/template/Update.java.btl" beforeDir="false" afterPath="$PROJECT_DIR$/generating/src/main/resources/template/Update.java.btl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generating/src/test/java/com/example/generating/GeneratingApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/generating/src/test/java/com/example/generating/GeneratingApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/socket/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/src/main/java/com/example/socket/SocketApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/socket/src/main/java/com/example/socket/SocketApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/socket/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zuul/src/main/java/com/example/zuul/ZuulApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/zuul/src/main/java/com/example/zuul/ZuulApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zuul/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/zuul/src/main/resources/application.yml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/server/target/" />
@@ -50,32 +22,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/generating/src/test/java/com/example/generating/GeneratingApplicationTests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="988">
-              <caret line="52" column="46" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="46" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/socket/src/main/resources/application.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/socket/src/main/resources/config/application-dev.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="13" column="8" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="57">
+                <caret line="3" column="12" lean-forward="true" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -142,9 +96,9 @@
         <option value="$PROJECT_DIR$/socket/src/main/java/com/example/socket/SocketApplication.java" />
         <option value="$PROJECT_DIR$/zuul/src/main/java/com/example/zuul/ZuulApplication.java" />
         <option value="$PROJECT_DIR$/generating/src/main/resources/template/Dao.xml.btl" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/generating/src/test/java/com/example/generating/GeneratingApplicationTests.java" />
         <option value="$PROJECT_DIR$/socket/src/main/resources/config/application-dev.yml" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -219,63 +173,21 @@
               <item name="socket" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="karat-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="karat-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="socket" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="karat-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="karat-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="socket" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="business" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="karat-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="karat-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="socket" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="karat-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="karat-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="socket" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="karat-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="karat-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="zuul" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="karat-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="karat-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="zuul" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="karat-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="karat-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="zuul" type="462c0819:PsiDirectoryNode" />
+              <item name="socket" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="socket" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="karat-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="karat-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="zuul" type="462c0819:PsiDirectoryNode" />
+              <item name="socket" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
@@ -395,7 +307,7 @@
       <workItem from="1577519252355" duration="2876000" />
       <workItem from="1577522153521" duration="234000" />
       <workItem from="1577528849247" duration="545000" />
-      <workItem from="1577670181187" duration="12923000" />
+      <workItem from="1577670181187" duration="13552000" />
     </task>
     <task id="LOCAL-00001" summary="websocket">
       <created>1577519770191</created>
@@ -418,7 +330,21 @@
       <option name="project" value="LOCAL" />
       <updated>1577677846677</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="swagger接口文档配置+逆向工程整理">
+      <created>1577686987058</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1577686987058</updated>
+    </task>
+    <task id="LOCAL-00005" summary="删除逆向工程测试配置">
+      <created>1577687169710</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1577687169710</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -454,7 +380,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16578000" />
+    <option name="totallyTimeSpent" value="17207000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -501,7 +427,9 @@
     <MESSAGE value="websocket" />
     <MESSAGE value="逆向工程(待整理)" />
     <MESSAGE value="逆向工程" />
-    <option name="LAST_COMMIT_MESSAGE" value="逆向工程" />
+    <MESSAGE value="swagger接口文档配置+逆向工程整理" />
+    <MESSAGE value="删除逆向工程测试配置" />
+    <option name="LAST_COMMIT_MESSAGE" value="删除逆向工程测试配置" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/generating/src/main/java/com/example/generating/builder/ConfigBuilder.java">
@@ -864,16 +792,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="209">
-            <caret line="11" column="17" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="17" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/zuul/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
@@ -902,6 +820,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="13" column="8" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="57">
+            <caret line="3" column="12" lean-forward="true" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

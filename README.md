@@ -21,15 +21,13 @@
     1、server
     2、zuul
     3、socket
-    4、admin
   
 
 ## **代码模块划分**
-    ├── common   基础配置及工具类
+    ├── socket   通讯模块
     ├── server   注册中心
     ├── zuul     网关
     ├── generating  代码生成工具
-    ├── admin     后台管理
 
     
 ## **开发环境**
