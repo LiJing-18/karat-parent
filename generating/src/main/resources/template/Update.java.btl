@@ -20,10 +20,12 @@ import ${config.prePackageName}.${config.moduleName}.entity.${config.enBigName};
 @Getter
 @Setter
 @ApiModel(value = "${config.enBigName}Update")
-public class ${config.enBigName}Update extends BaseDto{
+public class ${config.enBigName}Update{
 
     private static final long serialVersionUID = 1L;
 
+    /**主键id**/
+    private String id;
 <% for(field in tableInfo.fields!){ %>
     <% if (fieldUtil.getIsNotBaseField(field.name)) { %>
     /** ${field.comment} */

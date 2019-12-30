@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.socket.business.dao.BannerInfoDao">
+    <!-- 输出字段列 -->
+	<sql id="bannerInfoColumns">
+       a.Id as "id",
+       a.Position as "position",
+       a.ContentType as "contentType",
+       a.Content as "content",
+       a.BusinessId as "businessId",
+       a.BusinessType as "businessType",
+       a.ImageUrl as "imageUrl",
+       a.IsOnline as "isOnline",
+       a.Sort as "sort",
+       a.Remark as "remark",
+       a.CreateUserId as "createUserId",
+       a.CreateUserName as "createUserName",
+       a.CreateTime as "createTime",
+       a.UpdateUserId as "updateUserId",
+       a.UpdateUserName as "updateUserName",
+       a.UpdateTime as "updateTime",
+       a.IsDeleted as "isDeleted",
+       a.DeleteUserId as "deleteUserId",
+       a.DeleteUserName as "deleteUserName",
+       a.DeleteTime as "deleteTime"
+	</sql>
+
+	<!-- 输出字段关联表 -->
+    <sql id="bannerInfoJoins">
+    </sql>
+
+    <!-- 查询单条记录 -->
+    <select id="single" resultType="BannerInfo">
+        SELECT
+            <include refid="bannerInfoColumns"/>
+        FROM banner_info a
+        <include refid="bannerInfoJoins"/>
+        WHERE a.IsDeleted = 1 and a.id = #{id}
+    </select>
+
+    <!-- 查询列表 -->
+    <select id="list" resultType="BannerInfo">
+        SELECT
+            <include refid="bannerInfoColumns"/>
+        FROM banner_info a
+        <include refid="bannerInfoJoins"/>
+        <where>
+            a.IsDeleted = 1
+            <if test="Position ！=null">
+                AND a.Position = #{position}
+            </if>
+            <if test="ContentType ！=null">
+                AND a.ContentType = #{contentType}
+            </if>
+            <if test="Content ！=null">
+                AND a.Content = #{content}
+            </if>
+            <if test="BusinessId ！=null">
+                AND a.BusinessId = #{businessId}
+            </if>
+            <if test="BusinessType ！=null">
+                AND a.BusinessType = #{businessType}
+            </if>
+            <if test="ImageUrl ！=null">
+                AND a.ImageUrl = #{imageUrl}
+            </if>
+            <if test="IsOnline ！=null">
+                AND a.IsOnline = #{isOnline}
+            </if>
+            <if test="Sort ！=null">
+                AND a.Sort = #{sort}
+            </if>
+        </where>
+        <choose>
+            <when test="orderBy !=null">
+                ORDER BY ${orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.CreateTime DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <!-- 插入 -->
+    <insert id="insert">
+        INSERT INTO banner_info(
+            id,
+            Position,
+            ContentType,
+            Content,
+            BusinessId,
+            BusinessType,
+            ImageUrl,
+            IsOnline,
+            Sort,
+            IsDeleted,
+            CreateTime
+        ) VALUES (
+            #{id},
+            #{position},
+            #{contentType},
+            #{content},
+            #{businessId},
+            #{businessType},
+            #{imageUrl},
+            #{isOnline},
+            #{sort},
+            1,
+            NOW()
+        )
+    </insert>
+
+    <!-- 修改 -->
+    <update id="update">
+        UPDATE banner_info SET
+            Position = #{position},
+            ContentType = #{contentType},
+            Content = #{content},
+            BusinessId = #{businessId},
+            BusinessType = #{businessType},
+            ImageUrl = #{imageUrl},
+            IsOnline = #{isOnline},
+            Sort = #{sort},
+            UpdateTime = NOW()
+        WHERE id = #{id}
+    </update>
+
+    <!-- 根据id修改实体中不为null的列 -->
+    <update id="updateExistById">
+        UPDATE banner_info SET
+                        <if test="Position ！=null">
+                            Position = #{position},
+                        </if>
+                        <if test="ContentType ！=null">
+                            ContentType = #{contentType},
+                        </if>
+                        <if test="Content ！=null">
+                            Content = #{content},
+                        </if>
+                        <if test="BusinessId ！=null">
+                            BusinessId = #{businessId},
+                        </if>
+                        <if test="BusinessType ！=null">
+                            BusinessType = #{businessType},
+                        </if>
+                        <if test="ImageUrl ！=null">
+                            ImageUrl = #{imageUrl},
+                        </if>
+                        <if test="IsOnline ！=null">
+                            IsOnline = #{isOnline},
+                        </if>
+                        <if test="Sort ！=null">
+                            Sort = #{sort},
+                        </if>
+            UpdateTime = NOW()
+        WHERE id = #{id}
+    </update>
+
+    <!-- 删除 -->
+    <update id="delete">
+        UPDATE banner_info SET
+            IsDeleted = 2,
+            DeleteTime = NOW()
+        WHERE id IN
+        <foreach collection="ids" item="id" index="index" open="(" separator="," close=")">
+           #{id}
+        </foreach>
+    </update>
+
+    <!-- 查询唯一记录 -->
+    <select id="findUniqueByProperty" resultType="BannerInfo">
+        SELECT
+            <include refid="bannerInfoColumns"/>
+        FROM banner_info a
+        <include refid="bannerInfoJoins"/>
+        WHERE a.IsDeleted = 1 and ${propertyName} = #{value}
+    </select>
+</mapper>

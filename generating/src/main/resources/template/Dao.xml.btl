@@ -33,19 +33,19 @@
                 if (fieldUtil.getIsNotBaseField(field.name)) {
             %>
                     <% if (field.columnType.type == "Integer") { %>
-            <if test="@hans.common.util.ExpandUtil@validInt(${tool.firstLetterToLower(field.name)})">
+            <if test="${field.name} ！=null">
                 AND a.${field.name} = #{${tool.firstLetterToLower(field.name)}}
             </if>
                     <% } %>
                     <% if (field.columnType.type == "String") { %>
-            <if test="@hans.common.util.ExpandUtil@validStr(${tool.firstLetterToLower(field.name)})">
+            <if test="${field.name} ！=null">
                 AND a.${field.name} = #{${tool.firstLetterToLower(field.name)}}
             </if>
                     <% } %>
             <% }} %>
         </where>
         <choose>
-            <when test="@hans.common.util.ExpandUtil@validStr(orderBy)">
+            <when test="orderBy !=null">
                 ORDER BY ${"${"}orderBy}
             </when>
             <otherwise>
@@ -64,8 +64,6 @@
             ${field.name}${fieldLP.last?"":","}
             <% }} %>
             IsDeleted,
-            CreateUserId,
-            CreateUserName,
             CreateTime
         ) VALUES (
             #{id},
@@ -75,8 +73,6 @@
             #{${tool.firstLetterToLower(field.name)}}${fieldLP.last?"":","}
             <% }} %>
             1,
-            '${'${'}@hans.common.util.CurrentUser@oauthId()}',
-            '${'${'}@hans.common.util.CurrentUser@oauthName()}',
             <% if (dbType == "mysql") { %>
             NOW()
             <% } %>
@@ -94,8 +90,6 @@
             %>
             ${field.name} = #{${tool.firstLetterToLower(field.name)}}${fieldLP.last?"":","}
             <% }} %>
-            UpdateUserId = '${'${'}@hans.common.util.CurrentUser@oauthId()}',
-            UpdateUserName = '${'${'}@hans.common.util.CurrentUser@oauthName()}',
             UpdateTime = <% if (dbType == "mysql") { %>NOW()<% } %><% if (dbType == "sql_server") { %>GETDATE() <% } %>
 
         WHERE id = #{id}
@@ -108,18 +102,16 @@
                 if (fieldUtil.getIsNotBaseField(field.name)) {
             %>
             <% if (field.columnType.type == "Integer") { %>
-                        <if test="@hans.common.util.ExpandUtil@validInt(${tool.firstLetterToLower(field.name)})">
+                        <if test="${field.name} ！=null">
                             ${field.name} = #{${tool.firstLetterToLower(field.name)}}${fieldLP.last?"":","}
                         </if>
                                 <% } %>
                                 <% if (field.columnType.type == "String") { %>
-                        <if test="@hans.common.util.ExpandUtil@validStr(${tool.firstLetterToLower(field.name)})">
+                        <if test="${field.name} ！=null">
                             ${field.name} = #{${tool.firstLetterToLower(field.name)}}${fieldLP.last?"":","}
                         </if>
                                 <% } %>
             <% }} %>
-            UpdateUserId = '${'${'}@hans.common.util.CurrentUser@oauthId()}',
-            UpdateUserName = '${'${'}@hans.common.util.CurrentUser@oauthName()}',
             UpdateTime = <% if (dbType == "mysql") { %>NOW()<% } %><% if (dbType == "sql_server") { %>GETDATE() <% } %>
 
         WHERE id = #{id}
@@ -129,8 +121,6 @@
     <update id="delete">
         UPDATE ${tableInfo.name} SET
             IsDeleted = 2,
-            DeleteUserId = '${'${'}@hans.common.util.CurrentUser@oauthId()}',
-            DeleteUserName = '${'${'}@hans.common.util.CurrentUser@oauthName()}',
             DeleteTime = <% if (dbType == "mysql") { %>NOW()<% } %><% if (dbType == "sql_server") { %>GETDATE() <% } %>
 
         WHERE id IN

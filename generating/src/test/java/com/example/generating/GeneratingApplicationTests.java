@@ -25,7 +25,7 @@ public class GeneratingApplicationTests {
 
         TempConfig config = new TempConfig();// 包前缀
         config.setPrePackageName("com.example.socket");   // 包前缀
-        config.setModuleName("banner"); // 模块名称称
+        config.setModuleName("business"); // 模块名称称
         config.setTemplatePath("template");   // 模板路径
         config.setCover(true);  // 覆盖原有文件
         config.setAuthor("L");
@@ -48,7 +48,7 @@ public class GeneratingApplicationTests {
      */
     public static void configOrder(TempConfig config) {
         // 代码生成路径
-        config.setProjectPath("C:\\file");
+        config.setProjectPath("C:\\Users");
         // 配置需要生成的表  若不配置默认生成所有
         config.getTableList().add("banner_info");
     }
@@ -76,15 +76,12 @@ public class GeneratingApplicationTests {
 
         // Controller import配置
         config.getControllerImports().add("com.example.socket.business.ResponseVo");
+        config.getControllerImports().add("com.example.socket.business.BaseController");
 
         // insert import配置
-        config.getInsertImports().add("javax.validation.constraints.NotBlank");
-        config.getInsertImports().add("javax.validation.constraints.NotNull");
         config.getInsertImports().add("org.hibernate.validator.constraints.Length");
 
         // update import配置
-        config.getUpdateImports().add("javax.validation.constraints.NotBlank");
-        config.getUpdateImports().add("javax.validation.constraints.NotNull");
         config.getUpdateImports().add("org.hibernate.validator.constraints.Length");
 
         // Dao import配置

@@ -13,13 +13,14 @@
     2、SpringBoot 2.1.3.RELEASE
     3、Redis    缓存
     4、Mysql 5.6    数据库
+    5、swagger    接口文档
    
         
     
 ## **本地运行 启动顺序**
     1、server
     2、zuul
-    3、auth
+    3、socket
     4、admin
   
 
@@ -27,8 +28,7 @@
     ├── common   基础配置及工具类
     ├── server   注册中心
     ├── zuul     网关
-    ├── auth     统一鉴权模块
-    ├── tx-lcn   分布式事务中心 http://127.0.0.1:7970/admin/index.html#/   密码 123456
+    ├── generating  代码生成工具
     ├── admin     后台管理
 
     

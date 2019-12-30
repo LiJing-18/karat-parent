@@ -1,6 +1,7 @@
 server:
   port: 9091
 spring:
+  basePackage: com.example.zuul
   application:
     name: zuul
 
@@ -11,12 +12,24 @@ eureka:
     service-url:
       defaultZone: http://${eureka.instance.hostname}:9090/eureka/
 
+#----------------------Swagger2配置-------------------
+swagger2:
+  open: true
+  testToken: Bearer Get after landing
+  basePackage: ${spring.basePackage}
+  name: L前端api接口
+  url:
+  email:
+  title: springboot利用swagger构建api文档
+  description: springboot利用swagger构建api文档
+
 
 zuul:
   routes:
     socket:
       path: /socket/**
       serviceId: socket
+
 
 
 

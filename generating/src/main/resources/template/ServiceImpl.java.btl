@@ -6,8 +6,6 @@ import ${import};
 
 import ${config.prePackageName}.${config.moduleName}.service.${config.enBigName}Service;
 import org.springframework.stereotype.Service;
-import com.codingapi.txlcn.tc.annotation.DTXPropagation;
-import com.codingapi.txlcn.tc.annotation.TxTransaction;
 
 /**
  * ${config.chName}Service
@@ -15,7 +13,6 @@ import com.codingapi.txlcn.tc.annotation.TxTransaction;
  * @Date ${tool.currentTime()}
  */
 @Service
-@TxTransaction(propagation = DTXPropagation.SUPPORTS)
 public class ${config.enBigName}ServiceImpl  implements ${config.enBigName}Service{
 
 

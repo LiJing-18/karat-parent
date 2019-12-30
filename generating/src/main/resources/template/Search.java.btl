@@ -20,7 +20,7 @@ import ${config.prePackageName}.${config.moduleName}.entity.${config.enBigName};
 @Getter
 @Setter
 @ApiModel(value = "${config.enBigName}Search")
-public class ${config.enBigName}Search extends BasePageDto {
+public class ${config.enBigName}Search {
 
     private static final long serialVersionUID = 1L;
 
